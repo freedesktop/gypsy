@@ -227,7 +227,7 @@ shutdown_connection (GypsyClient *client)
 	}
 
 	if (priv->debug_log) {
-		g_io_channel_shutdown (priv->channel, TRUE, NULL);
+		g_io_channel_shutdown (priv->debug_log, TRUE, NULL);
 		g_io_channel_unref (priv->debug_log);
 		priv->debug_log = NULL;
 	}
